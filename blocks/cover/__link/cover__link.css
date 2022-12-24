@@ -1,0 +1,42 @@
+.cover__link {
+  max-width: 1240px;
+  min-height: 740px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-decoration: none;
+  position: relative;
+  background-image: url(../../../images/__background.jpg);
+  background-position: center;
+}
+
+
+.cover__link::before {
+  content: '';
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #2A2C2F;
+  opacity: .3;
+  transition: .4s ease-in-out;
+}
+
+.cover__link:hover::before {
+  opacity: .8;
+}
+
+@media (max-width: 1024px) {
+  .cover__link {
+    max-width: 1024px;
+    min-height: auto;
+    margin-bottom: 92px;
+    aspect-ratio: 8/5;
+  }
+}
